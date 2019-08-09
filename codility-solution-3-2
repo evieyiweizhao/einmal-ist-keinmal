@@ -2,7 +2,7 @@
 // which means that exactly one element is missing."
 // Your goal is to find that missing element.
 // General idea: store a sorted array and find the missing one
-// SUGGESTIONS ARE WELCOMED
+// In fact, calculating and comparing the sums will be a better solution
 
 class Solution {
     public int solution(int[] A) {
