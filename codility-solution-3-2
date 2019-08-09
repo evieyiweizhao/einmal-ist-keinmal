@@ -1,0 +1,30 @@
+
+class Solution {
+    public int solution(int[] A) {
+        // write your code in Java SE 8
+        int a = A.length;
+        Integer[] B = new Integer[a+1];
+        // case with an empty array
+        if(a == 0){ 
+            return 1;
+        // case with a one-element array
+        }else if(a == 1){
+            if(A[0] == 1){
+                return 2;
+            }else{
+                return 1;
+            }
+        }else{
+            for(int i = 0; i < a; i++){
+                B[A[i] - 1] = A[i];
+            }
+            // array B has one more element than A
+            for(int j = 0; j < a+1; j++){
+                if(B[j] == null){
+                    return j+1;
+                }
+            }
+            return -1;
+        }
+    }
+}
